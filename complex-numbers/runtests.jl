@@ -32,13 +32,13 @@ end
 
 @test ComplexNumber(0, 1)^2 == ComplexNumber(-1, 0)
 
-# @testset "Absolute value" begin
-#     @test abs(ComplexNumber(5, 0))  == 5
-#     @test abs(ComplexNumber(-5, 0)) == 5
-#     @test abs(ComplexNumber(0, 5))  == 5
-#     @test abs(ComplexNumber(0, -5)) == 5
-#     @test abs(ComplexNumber(3, 4))  == 5
-# end
+@testset "Absolute value" begin
+    @test abs(ComplexNumber(5, 0))  == 5
+    @test abs(ComplexNumber(-5, 0)) == 5
+    @test abs(ComplexNumber(0, 5))  == 5
+    @test abs(ComplexNumber(0, -5)) == 5
+    @test abs(ComplexNumber(3, 4))  == 5
+end
 
 # @testset "Complex conjugate" begin
 #     @test conj(ComplexNumber(5, 0))  == ComplexNumber(5, 0)
