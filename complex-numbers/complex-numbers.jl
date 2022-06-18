@@ -1,4 +1,4 @@
-import Base: +, -, *, /
+import Base: +, -, *, /, abs, conj, real, imag
 
 struct ComplexNumber{T<:Real} <: Number
     real::T
@@ -20,3 +20,7 @@ ComplexNumber(real::Real, imag::Real) = ComplexNumber(promote(real,imag)...)
 function abs(c::ComplexNumber) return sqrt(c.real^2+c.imag^2) end
 
 function conj(c::ComplexNumber) return ComplexNumber(c.real, - c.imag) end
+
+function real(c::ComplexNumber) return c.real end
+
+function imag(c::ComplexNumber) return c.imag end
