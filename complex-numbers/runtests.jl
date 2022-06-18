@@ -40,11 +40,11 @@ end
     @test abs(ComplexNumber(3, 4))  == 5
 end
 
-# @testset "Complex conjugate" begin
-#     @test conj(ComplexNumber(5, 0))  == ComplexNumber(5, 0)
-#     @test conj(ComplexNumber(0, 5))  == ComplexNumber(0, -5)
-#     @test conj(ComplexNumber(1, 1))  == ComplexNumber(1, -1)
-# end
+@testset "Complex conjugate" begin
+    @test conj(ComplexNumber(5, 0))  == ComplexNumber(5, 0)
+    @test conj(ComplexNumber(0, 5))  == ComplexNumber(0, -5)
+    @test conj(ComplexNumber(1, 1))  == ComplexNumber(1, -1)
+end
 
 # @testset "Real part" begin
 #     @test real(ComplexNumber(1, 0)) == 1
