@@ -58,12 +58,12 @@ end
     @test imag(ComplexNumber(1, 2)) == 2
 end
 
-# @testset "Complex exponential" begin
-#     @test_broken exp(ComplexNumber(0, π)) ≈ ComplexNumber(-1, 0)
-#     @test exp(ComplexNumber(0, 0)) == ComplexNumber(1, 0)
-#     @test exp(ComplexNumber(1, 0)) ≈ ComplexNumber(ℯ, 0)
-#     @test_broken exp(ComplexNumber(log(2), π)) ≈ ComplexNumber(-2, 0)
-# end
+@testset "Complex exponential" begin
+    @test_broken exp(ComplexNumber(0, π)) ≈ ComplexNumber(-1, 0)
+    @test exp(ComplexNumber(0, 0)) == ComplexNumber(1, 0)
+    @test exp(ComplexNumber(1, 0)) ≈ ComplexNumber(ℯ, 0)
+    @test_broken exp(ComplexNumber(log(2), π)) ≈ ComplexNumber(-2, 0)
+end
 
 # # Bonus B
 # @testset "Syntax sugar jm" begin

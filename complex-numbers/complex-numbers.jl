@@ -1,4 +1,4 @@
-import Base: +, -, *, /, abs, conj, real, imag
+import Base: +, -, *, /, ≈, ==, abs, conj, real, imag, exp
 
 struct ComplexNumber{T<:Real} <: Number
     real::T
@@ -18,4 +18,5 @@ imag(c::ComplexNumber) = c.imag
 /(c1::ComplexNumber, c2::ComplexNumber) = ComplexNumber(Float64(c1.real * c2.real + c1.imag * c2.imag)/abs(c2)^2 , Float64(c1.imag * c2.real - c1.real * c2.imag)/abs(c2)^2)
 ≈(c1::ComplexNumber, c2::ComplexNumber) = isapprox(c1.real, c2.real) && isapprox(c1.imag, c2.imag)
 
-
+exp(c::ComplexNumber) = ComplexNumber(exp(c.real) * cos(c.imag), exp(c.real) * sin(c.imag))
+==(a::ComplexNumber, b::ComplexNumber) = (a.real == b.real) && (a.imag == b.imag)
