@@ -17,11 +17,11 @@ include("complex-numbers.jl")
         @test ComplexNumber(1, 2) - ComplexNumber(3, 4) == ComplexNumber(-2, -2)
     end
 
-#     @testset "Multiplication" begin
-#         @test ComplexNumber(1, 0) * ComplexNumber(2, 0) == ComplexNumber(2, 0)
-#         @test ComplexNumber(0, 1) * ComplexNumber(0, 2) == ComplexNumber(-2, 0)
-#         @test ComplexNumber(1, 2) * ComplexNumber(3, 4) == ComplexNumber(-5, 10)
-#     end
+    @testset "Multiplication" begin
+        @test ComplexNumber(1, 0) * ComplexNumber(2, 0) == ComplexNumber(2, 0)
+        @test ComplexNumber(0, 1) * ComplexNumber(0, 2) == ComplexNumber(-2, 0)
+        @test ComplexNumber(1, 2) * ComplexNumber(3, 4) == ComplexNumber(-5, 10)
+    end
 
 #     @testset "Division" begin
 #         @test ComplexNumber(1, 0) / ComplexNumber(2, 0) == ComplexNumber(0.5, 0)
@@ -30,7 +30,7 @@ include("complex-numbers.jl")
 #     end 
 end
 
-# @test ComplexNumber(0, 1)^2 == ComplexNumber(-1, 0)
+@test ComplexNumber(0, 1)^2 == ComplexNumber(-1, 0)
 
 # @testset "Absolute value" begin
 #     @test abs(ComplexNumber(5, 0))  == 5
