@@ -65,10 +65,9 @@ end
     @test_broken exp(ComplexNumber(log(2), π)) ≈ ComplexNumber(-2, 0)
 end
 
-# # Bonus B
-# @testset "Syntax sugar jm" begin
-#     @test ComplexNumber(0, 1)  == jm
-#     @test ComplexNumber(1, 0)  == 1 + 0jm
-#     @test ComplexNumber(1, 1)  == 1 + 1jm
-#     @test ComplexNumber(-1, 0) == jm^2
-# end
+@testset "Syntax sugar jm" begin
+    @test ComplexNumber(0, 1)  == jm
+    @test ComplexNumber(1, 0)  == 1 + 0jm
+    @test ComplexNumber(1, 1)  == 1 + 1jm
+    @test ComplexNumber(-1, 0) == jm^2
+end

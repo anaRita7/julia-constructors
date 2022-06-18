@@ -20,3 +20,7 @@ imag(c::ComplexNumber) = c.imag
 
 exp(c::ComplexNumber) = ComplexNumber(exp(c.real) * cos(c.imag), exp(c.real) * sin(c.imag))
 ==(a::ComplexNumber, b::ComplexNumber) = (a.real == b.real) && (a.imag == b.imag)
+
+const jm = ComplexNumber(0, 1)
++(a::Real, c::ComplexNumber) = ComplexNumber(a + c.real, c.imag)
+*(a::Real, c::ComplexNumber) = ComplexNumber(a * c.real, a * c.imag)
