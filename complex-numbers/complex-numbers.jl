@@ -17,10 +17,10 @@ ComplexNumber(real::Real, imag::Real) = ComplexNumber(promote(real,imag)...)
 
 ≈(c1::ComplexNumber, c2::ComplexNumber) = isapprox(c1.real, c2.real) && isapprox(c1.imag, c2.imag)
 
-function abs(c::ComplexNumber) return sqrt(c.real^2+c.imag^2) end
+abs(c::ComplexNumber) = sqrt(c.real^2+c.imag^2)
 
-function conj(c::ComplexNumber) return ComplexNumber(c.real, - c.imag) end
+conj(c::ComplexNumber) = ComplexNumber(c.real, - c.imag)
 
-function real(c::ComplexNumber) return c.real end
+real(c::ComplexNumber) = c.real 
 
-function imag(c::ComplexNumber) return c.imag end
+imag(c::ComplexNumber) = c.imag 
